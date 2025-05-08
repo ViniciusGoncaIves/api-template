@@ -1,4 +1,4 @@
-# Nome do Projeto - [Tema do Grupo]
+# Gerenciamento de uma mecânica - [Mecânica]
 
 ## 📝 Descrição
 API para gerenciamento de oficina mecânica, incluindo cadastro de clientes, veículos, ordens de serviço, produtos e relatórios financeiros
