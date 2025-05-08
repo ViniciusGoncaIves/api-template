@@ -38,7 +38,7 @@ npm run dev
 ### `GET /mecanica/veiculos/placa/:placa`
 Retorna as informações do carro e do respectivo dono do veículo.
 
-**Resquest:**
+**Request:**
 ```
 http://localhost:3000/mecanica/veiculos/placa/XYZ6F56
 ```
@@ -97,7 +97,7 @@ Cadastra um veiculo com base nas informações mandadas.
 ### `DELETE /mecanica/veiculos/deletar/:placa`
 Exclui um veículo com base na placa passada como parâmetro.
 
-**Resquest:**
+**Request:**
 ```
 http://localhost:3000/mecanica/veiculos/deletar/FOD7S56
 ```
@@ -122,7 +122,7 @@ http://localhost:3000/mecanica/veiculos/deletar/FOD7S56
 ### `GET /mecanica/veiculos/cliente/documento/:documento`
 Retorna informações sobre o cliente e sobre o(s) carros que o cliente tem na mecânica.
 
-**Resquest:**
+**Request:**
 ```
 http://localhost:3000/mecanica/veiculos/cliente/documento/123.456.789-09
 ```
@@ -174,7 +174,7 @@ Cadastrar um cliente
 ### `DELETE /mecanica/clientes/deletar/:id`
 Exclui um cliente conforme o ID passado por parâmetro.
 
-**Resquest:**
+**Request:**
 ```
 http://localhost:3000/mecanica/clientes/deletar/1
 ```
@@ -225,7 +225,7 @@ Cadastrar um produto
 ### `PATCH /mecanica/servicos/atualizar/:id`
 Atualiza o valor do serviço com ID passado como parâmetro.
 
-**Resquest:**
+**Request:**
 ```json
 {
   "valor": 950.00
@@ -324,7 +324,7 @@ Atualiza o status de determinada ordem de serviço conforme o ID passado por par
 ### `DELETE /mecanica/ordens/deletar/:id`
 Exclui uma ordem de serviço conforme o ID da ordem passado por parâmetro.
 
-**Resquest:**
+**Request:**
 ```
 http://localhost:3000/mecanica/ordens/deletar/25
 ```
@@ -374,7 +374,7 @@ http://localhost:3000/mecanica/ordens/deletar/25
 ### `POST /mecanica/produtos/cadastrar`
 Cadastra um produto.
 
-**Resquest:**
+**Request:**
 ```json
 {
   "nome": "Teste",
