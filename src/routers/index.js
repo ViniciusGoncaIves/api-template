@@ -14,7 +14,7 @@ module.exports = (app) => {
   app.patch('/mecanica/ordens/atualizar/:id', mecanicaRoute.atualizarStatusOrdem); 
   app.delete('/mecanica/ordens/deletar/:id', mecanicaRoute.deletarOrdem); 
   app.get('/mecanica/produtos/listar', mecanicaRoute.listarProdutos); 
-  app.post('/mecanica/produtos/cadastrar', mecanicaRoute.cadastrarProduto); o
+  app.post('/mecanica/produtos/cadastrar', mecanicaRoute.cadastrarProduto);
   app.patch('/mecanica/produtos/atualizar/:id', mecanicaRoute.atualizarValorProduto); 
   app.delete('/mecanica/produtos/deletar/:id', mecanicaRoute.deletarProduto); 
   app.post('/mecanica/ordens/servicos/cadastrar', mecanicaRoute.adicionarServicoNaOrdem); 
