@@ -111,7 +111,7 @@ Retorna as informações do carro e do respectivo dono do veículo.
 ```
 http://localhost:3000/mecanica/veiculos/placa/XYZ6F56
 ```
-
+```
 **Response:**
 ```json
 {
@@ -128,6 +128,7 @@ http://localhost:3000/mecanica/veiculos/placa/XYZ6F56
     }
   ]
 }
+```
 ```
 
 ### `POST /mecanica/veiculos/cadastrar`
