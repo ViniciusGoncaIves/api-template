@@ -249,7 +249,7 @@ Exclui um cliente conforme o ID passado por parâmetro.
 http://localhost:3000/mecanica/clientes/deletar/1
 ```
 
-**Resquest:**
+**Response:**
 ```json
 {
   "status": "ok",
