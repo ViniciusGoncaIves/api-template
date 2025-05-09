@@ -24,27 +24,23 @@ npm install
 # DB_USER=postgres
 # DB_PASSWORD=Sua_senha
 # DB_NAME=nome_banco
+```
 
 # Rode o script SQL
 
-```
+```sql
 CREATE TABLE T_PESSOA (
     id_pessoa SERIAL PRIMARY KEY,
-    tipo_pessoa CHAR(1) NOT NULL CHECK (tipo_pessoa IN ('F', 'J')), -- F = Física, J = Jurídica
+    tipo_pessoa CHAR(1) NOT NULL CHECK (tipo_pessoa IN ('F', 'J')), 
     nome VARCHAR(100) NOT NULL,
-    documento VARCHAR(18) NOT NULL UNIQUE, -- Pode ser CPF ou CNPJ --REGEX NO JS
-    data_nascimento DATE, -- Só usado se for pessoa física
-    --razao_social VARCHAR(150), -- Só usado se for pessoa jurídica
+    documento VARCHAR(18) NOT NULL UNIQUE, 
+    data_nascimento DATE, 
     telefone VARCHAR(20),
     email VARCHAR(100),
     endereco VARCHAR(200),
-    --cidade VARCHAR(100),
-    --estado VARCHAR(2),
     cep VARCHAR(10),
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
 
 CREATE TABLE T_VEICULOS (
     id_veiculo SERIAL PRIMARY KEY,
@@ -66,17 +62,15 @@ CREATE TABLE T_PRODUTOS (
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
 CREATE TABLE T_ORDENS (
     id_os SERIAL PRIMARY KEY,
     id_veiculo INT NOT NULL REFERENCES T_VEICULOS(id_veiculo),
-    tipo CHAR(3) NOT NULL CHECK (tipo IN ('OS', 'ORC')), -- OS = Ordem, ORC = Orçamento
+    tipo CHAR(3) NOT NULL CHECK (tipo IN ('OS', 'ORC')),
     status VARCHAR(20) DEFAULT 'Aberto' CHECK (status IN ('Aberto', 'Em Andamento', 'Concluído', 'Cancelado')),
     data_emissao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_validade DATE GENERATED ALWAYS AS (data_emissao::date + INTERVAL '7 days') STORED,
     observacoes TEXT
 );
-
 
 CREATE TABLE T_SERVICOS (
     id_servico SERIAL PRIMARY KEY,
@@ -84,7 +78,6 @@ CREATE TABLE T_SERVICOS (
     valor NUMERIC(10, 2) NOT NULL,
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
 
 CREATE TABLE L_SERVICO_VEICULO (
     id_servico_veiculo SERIAL PRIMARY KEY,
@@ -100,7 +93,7 @@ CREATE TABLE L_SERVICO_VEICULO (
         (id_servico IS NOT NULL AND id_produto IS NULL)
         OR (id_servico IS NULL AND id_produto IS NOT NULL)
     )
-)
+);
 ```
 
 # Inicie o servidor
