@@ -103,7 +103,7 @@ npm run dev
 # 📚 Documentação da API
 
 ## 🎯 Exemplo de Endpoints
-
+```
 ### `GET /mecanica/veiculos/placa/:placa`
 Retorna as informações do carro e do respectivo dono do veículo.
 
@@ -111,7 +111,7 @@ Retorna as informações do carro e do respectivo dono do veículo.
 ```
 http://localhost:3000/mecanica/veiculos/placa/XYZ6F56
 ```
-```
+
 **Response:**
 ```json
 {
@@ -129,7 +129,7 @@ http://localhost:3000/mecanica/veiculos/placa/XYZ6F56
   ]
 }
 ```
-```
+
 
 ### `POST /mecanica/veiculos/cadastrar`
 Cadastra um veiculo com base nas informações mandadas.
